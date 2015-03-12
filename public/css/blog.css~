@@ -1,0 +1,108 @@
+body {
+  margin-top: 75px;
+}
+@media (min-width: 768px) {
+  /* tablets and up */
+
+  .group2 {
+    text-align: right;
+  }
+}
+footer {
+  margin: 10px 0;
+}
+#comments, #comments li {
+  margin: 0;
+  padding: 0;
+}
+#comments li {
+  list-style: none;
+}
+.photo {
+  margin-bottom: 10px;
+}
+.social-buttons button {
+  margin-top: 5px;
+}
+.link-item {
+  height: auto;
+  min-height: 160px;
+}
+
+.item-box {
+  height: auto;
+  min-height: 180px;
+  padding: 30px 0px;
+}
+#myCarousel .carousel-caption {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: left;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  text-shadow: none;
+}
+#myCarousel .list-group {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#myCarousel .list-group-item {
+  border-radius: 0px;
+  cursor: pointer;
+}
+#myCarousel .list-group .active {
+  background-color: #eee;
+}
+@media (min-width: 992px) {
+  #myCarousel {
+    padding-right: 33.3333%;
+  }
+  #myCarousel .carousel-controls {
+    display: none;
+  }
+}
+@media (max-width: 991px) {
+  .carousel-caption p, #myCarousel .list-group {
+    display: none;
+  }
+}
+
+.social-login-btn {
+  margin: 5px;
+  width: 45px;
+  height: 45px;
+  font-size: 180%;
+  padding: 5px;
+  border: 0px;
+  /*vertical-align: bottom;*/
+}
+
+.social-google {
+  background-color: #da573b;
+  /*border-color: #be5238;*/
+}
+.social-google:hover{
+  background-color: #be5238;
+  /*border-color: #9b4631;*/
+}
+
+.social-twitter {
+  background-color: #1daee3;
+  /*border-color: #3997ba;*/
+}
+.social-twitter:hover {
+  background-color: #3997ba;
+  /*border-color: #347b95;*/
+}
+
+.social-weibo {
+  background-color: #d72928;
+  /*border-color: #3997ba;*/
+}
+
+.social-weibo:hover {
+  background-color: #BE100F;
+  /*border-color: #3997ba;*/
+}

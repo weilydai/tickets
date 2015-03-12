@@ -1,0 +1,49 @@
+{{> header }}
+<div id="body" class="container">
+  <div class="row">
+    <div class="page-header">
+      <h2>Welcome</h2>
+    </div>
+    {{#if error}}
+    <div class="alert alert-danger" role="alert">{{{error}}}</div>
+    {{/if}}
+    {{#if success}}
+    <div class="alert alert-success" role="alert">{{{success}}}</div>
+    {{/if}}
+    <div class="panel panel-default">
+      <div class="panel-heading">Get AMC ticket instantly</div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-3">Select Quantity</div>
+          <div class="col-md-9">
+            <div class="btn-group">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+              1 Ticket - $10 USD
+              <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#" value="1">1 Ticket - $10 USD</a>
+              </li>
+              <li><a href="#" value="2">2 Ticket - $20 USD</a>
+            </li>
+            <li><a href="#" value="3">3 Ticket - $30 USD</a>
+          </li>
+          <li><a href="#" value="4">4 Ticket - $40 USD</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-9 col-md-offset-3">
+    <form method="post" action="/order">
+      <input type="hidden" name="quantity" value="1" id="quantity">
+      <button type="submit" class="paypal-button btn btn-default">Buy Now</button>
+    </form>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+{{> footer }}

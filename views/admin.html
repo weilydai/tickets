@@ -1,0 +1,97 @@
+{{> header }}
+<div id="body" class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="page-header">
+        <h2>Dashboard</h2>
+      </div>
+      {{#if error}}
+      <div class="alert alert-danger" role="alert">{{error}}</div>
+      {{/if}}
+      {{#if success}}
+      <div class="alert alert-success" role="alert">{{success}}</div>
+      {{/if}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="panel panel-default">
+        <div class="panel-heading">Sales Stats</div>
+        <ul class="list-group">
+          <li class="list-group-item">Unsold tickets
+            <span class="badge">{{length unsold}}</span>
+          </li>
+        </ul>
+        <ul class="list-group">
+          <li class="list-group-item">Sold tickets
+            <span class="badge">{{length sold}}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="panel panel-default">
+        <div class="panel-heading">Site Stats</div>
+        <ul class="list-group">
+          <li class="list-group-item">Visit Count
+            <span class="badge">10</span>
+          </li>
+          <li class="list-group-item">Buy Button Clicks
+            <span class="badge">10</span>
+          </li>
+          <li class="list-group-item">Canceled Sales
+            <span class="badge">10</span>
+          </li>
+          <li class="list-group-item">Successful Sales
+            <span class="badge">10</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">Sales
+          <div class="pull-right">
+            <form class="form-inline" method="POST" role="form">
+              <div class="form-group">
+                <input type="hidden" name="action" value="refresh">
+                <button type="submit" class="btn btn-xs">Refresh</button>
+              </div>
+            </form>
+          </div>
+          <div class="pull-right" style="margin: 0px 10px">
+            {{fromNow refreshTime}}
+          </div>
+        </div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>State</th>
+              <th>Method</th>
+              <th>Email</th>
+              <th>Amount</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each payments}}
+            <tr>
+              <td>{{id}}</td>
+              <td>{{state}}</td>
+              <td>{{payer.payment_method}}</td>
+              <td>{{payer.payer_info.email}}</td>
+              <td>{{parseTransaction transactions}}</td>
+              <td>{{showTime update_time}}</td>
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+{{> footer }}

@@ -1,0 +1,55 @@
+{{> header }}
+<div id="body" class="container">
+  <div class="row">
+    <section id="confirmation" class="container content-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2">
+            <h2 class="text-center">Thank you for your purchase</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2">
+            <p>Your Purchase ID is:{{paymentId}}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>Quantity</th>
+                  <th>Price</th>
+                  <th>Download</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>{{item}}</td>
+                  <td>{{quantity}}</td>
+                  <td>{{amount}}</td>
+                  <td>
+                    <form method="post" action="/download" target="_blank">
+                      <input type="hidden" name="paymentId" value="{{paymentId}}">
+                      <button type="submit" class="paypal-button btn btn-default">Download</button>
+                    </form>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2">
+            <p>If you have any questions, please contact us at <a href="mailto:info@frontpass.net">info@frontpass.net</a> with your purchase ID.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <p>
+      {{message}}
+    </p>
+  </div>
+</div>
+{{> footer }}

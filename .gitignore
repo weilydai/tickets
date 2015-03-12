@@ -1,0 +1,13 @@
+# Ignore all the node modules
+
+node_modules/
+
+
+# Ignore all the log files
+access.log
+
+# Ignore all the error files
+error.log
+
+# Ignore all the tickets files
+files/
