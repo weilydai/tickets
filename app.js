@@ -10,13 +10,10 @@ var hbs = require('./lib/hbs');
 var routes = require('./routes/index');
 var paypal = require('./lib/paypal');
 var ticket = require('./lib/ticket');
-var dropbox = require('./lib/dropbox');
-var Dropbox = require('dropbox');
 
 var http = require('http');
 
 ticket.initList();
-dropbox.getInfo();
 
 var app = express();
 var fs = require('fs');
