@@ -11,11 +11,14 @@ var routes = require('./routes/index');
 var paypal = require('./lib/paypal');
 var ticket = require('./lib/ticket');
 var s3 = require('./lib/s3');
+var mail = require('./lib/mail');
 
 var http = require('http');
 
-s3.listUnsold();
-s3.serve(1);
+// s3.listUnsold();
+// s3.serve(1);
+// mail.send({to: 'zhangdongopq@hotmail.com', id: 'test'});
+ticket.initList();
 
 var app = express();
 var fs = require('fs');

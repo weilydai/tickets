@@ -2,6 +2,7 @@ var paypal = require('../lib/paypal');
 var files = require('../lib/files');
 var mail = require('../lib/mail');
 var ticket = require('../lib/ticket');
+var s3 = require('../lib/s3');
 
 exports.post = function (req, res) {
   res.locals.session = req.session;
@@ -60,21 +61,29 @@ exports.get = function (req, res) {
         });
         console.error('execute' + err);
       } else {
-        console.log('===================');
-        var attachments = files.serve(req.session.quantity);
-        var options = {
-          'to': 'zhangdongopq@hotmail.com',
-          'attachments': attachments,
-          'id': payment_id
-        };
-        console.log(options);
+        console.log('========== order get ==========');
+        s3.serve(req.session.quantity, function(attachments) {
+            var options = {
+                'to': 'zhangdongopq@hotmail.com',
+                'attachments': attachments,
+                'id': payment_id
+            };
+            
+            mail.send(options);
+        });
+        // var options = {
+        //   'to': 'zhangdongopq@hotmail.com',
+        //   'attachments': s3.serve(req.session.quantity),
+        //   'id': payment_id
+        // };
+        // console.log(options);
 
-        files.generateOutput(attachments, payment_id, function (err, filePath) {
-          if (err) {
-            req.flash('error', 'file generateOutput error');
-            console.log(err);
-            res.redirect('/error');
-          } else {
+        // files.generateOutput(attachments, payment_id, function (err, filePath) {
+        //   if (err) {
+        //     req.flash('error', 'file generateOutput error');
+        //     console.log(err);
+        //     res.redirect('/error');
+        //   } else {
             res.render('success', {
               'message': payment_id + ' payment succeed',
               'paymentId': payment_id,
@@ -82,11 +91,11 @@ exports.get = function (req, res) {
               'quantity': req.session.quantity,
               'amount': req.session.amount
             });
-            mail.send(options);
-          }
-        });
+            // mail.send(options);
+        //   }
+        // });
 
-        files.sold(attachments);
+        // files.sold(attachments);
       }
     });
   }
