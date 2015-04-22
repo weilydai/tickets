@@ -70,32 +70,15 @@ exports.get = function (req, res) {
             };
             
             mail.send(options);
+            s3.moveFile(attachments);
         });
-        // var options = {
-        //   'to': 'zhangdongopq@hotmail.com',
-        //   'attachments': s3.serve(req.session.quantity),
-        //   'id': payment_id
-        // };
-        // console.log(options);
-
-        // files.generateOutput(attachments, payment_id, function (err, filePath) {
-        //   if (err) {
-        //     req.flash('error', 'file generateOutput error');
-        //     console.log(err);
-        //     res.redirect('/error');
-        //   } else {
-            res.render('success', {
-              'message': payment_id + ' payment succeed',
-              'paymentId': payment_id,
-              'item': req.session.item,
-              'quantity': req.session.quantity,
-              'amount': req.session.amount
-            });
-            // mail.send(options);
-        //   }
-        // });
-
-        // files.sold(attachments);
+        res.render('success', {
+          'message': payment_id + ' payment succeed',
+          'paymentId': payment_id,
+          'item': req.session.item,
+          'quantity': req.session.quantity,
+          'amount': req.session.amount
+        });
       }
     });
   }

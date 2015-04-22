@@ -15,9 +15,6 @@ var mail = require('./lib/mail');
 
 var http = require('http');
 
-// s3.listUnsold();
-// s3.serve(1);
-// mail.send({to: 'zhangdongopq@hotmail.com', id: 'test'});
 ticket.initList();
 
 var app = express();
