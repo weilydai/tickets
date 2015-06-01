@@ -5,7 +5,7 @@ var ticket = require('../lib/ticket');
 var s3 = require('../lib/s3');
 
 exports.post = function (req, res) {
-    res.locals.session = req.session;
+    // res.locals.session = req.session;
 
     var quantity = Number(req.body.quantity);
 
@@ -16,6 +16,13 @@ exports.post = function (req, res) {
     }
 
     if (ticket.setPending(quantity)) {
+        var timeout = setTimeout(function() {
+            console.log(req.session.cookie._expires < new Date());
+            if (req.session.cookie._expires < new Date()) {
+                return ticket.removePending(quantity);
+            }
+        }, 16 * 60 * 1000);
+
         paypal.createPayment(quantity, function (err, resp) {
             if (err) {
                 req.flash('error', err);
