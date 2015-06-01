@@ -21,7 +21,7 @@ exports.post = function (req, res) {
             if (req.session.cookie._expires < new Date()) {
                 return ticket.removePending(quantity);
             }
-        }, 16 * 60 * 1000);
+        }, 7 * 60 * 1000);
 
         paypal.createPayment(quantity, function (err, resp) {
             if (err) {
