@@ -6,7 +6,6 @@ var s3 = require('../lib/s3');
 
 exports.post = function (req, res) {
     // res.locals.session = req.session;
-
     var quantity = Number(req.body.quantity);
 
     if (quantity < ticket.minQuantity || quantity > ticket.maxQuantity) {
@@ -77,7 +76,6 @@ exports.get = function (req, res) {
                         'attachments': attachments,
                         'id': payment_id
                     };
-                    
                     mail.send(options);
                     s3.moveFile(attachments);
                 });
