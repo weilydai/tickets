@@ -17,7 +17,7 @@ var mail = require('./lib/mail');
 var http = require('http');
 
 ticket.initList();
-var initUnsold = schedule.scheduleJob('*/1 * * * *',ticket.initList);
+var initUnsold = schedule.scheduleJob('* */1 * * *',ticket.initList);
 
 
 var app = express();
