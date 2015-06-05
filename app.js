@@ -6,6 +6,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var flash = require('connect-flash');
+var schedule = require('node-schedule');
 var hbs = require('./lib/hbs');
 var routes = require('./routes/index');
 var paypal = require('./lib/paypal');
@@ -16,6 +17,8 @@ var mail = require('./lib/mail');
 var http = require('http');
 
 ticket.initList();
+var initUnsold = schedule.scheduleJob('*/1 * * * *',ticket.initList);
+
 
 var app = express();
 var fs = require('fs');
