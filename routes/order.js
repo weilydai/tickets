@@ -5,6 +5,7 @@ var ticket = require('../lib/ticket');
 var s3 = require('../lib/s3');
 
 exports.post = function (req, res) {
+    req.session.email = req.body.email;
     // res.locals.session = req.session;
     var quantity = Number(req.body.quantity);
 
@@ -55,7 +56,7 @@ exports.get = function (req, res) {
     var payer = {
         payer_id: req.query.PayerID
     };
-    console.log('########################', req.session);
+    // console.log('########################', req.session);
     if (!req.session.payment_id || !req.query.PayerID) {
         res.render('failure', {
             'message': 'cannot find payment_id or payer_id'
@@ -72,7 +73,7 @@ exports.get = function (req, res) {
                 console.log('resp', resp);
                 s3.serve(req.session.quantity, function(attachments) {
                     var options = {
-                        'to': 'zhangdongopq@hotmail.com',
+                        'to': req.session.email,
                         'attachments': attachments,
                         'id': payment_id
                     };
