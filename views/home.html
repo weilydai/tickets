@@ -9,6 +9,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="css/ticket-main.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <!-- Custom Font -->
     <link href="font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
@@ -66,7 +67,7 @@
         <div class="container">
           <div class="row">
             <div class="col-md-8 col-md-offset-2">
-              <!-- <img src="../resources/logotemp1.png"> -->
+              <img src="../resources/logotemp1.png">
               <p class="intro-text">特价电影票来袭！<br>在此购买AMC特价电影票！看电影只需$10 <del>(原价$15)</del></p>
               <a href="#ticket" class="btn btn-circle page-scroll">
                 <i class="fa fa-angle-double-down animated"></i>
@@ -110,14 +111,14 @@
                                 </ul>
                             </div>
                             <br>
-                            <div class="input-group margin-bottom-sm">
+                            <div class="input-group margin-bottom-sm" id="email-parent">
                                 <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
-                                <input class="form-control" type="email" placeholder="Email address" onblur="checkEmail();" id="email" name="email">
+                                <input class="form-control" type="email" placeholder="Email address" id="email" name="email" required>
                             </div>
                             <br>
                             <div class="input-group margin-bottom-sm no-error" id="confemail-parent">
                                 <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
-                                <input class="form-control" type="email" placeholder="Confirm Email" oninput="checkEmail();" id="confemail">
+                                <input class="form-control" type="email" placeholder="Confirm Email" oninput="check(this);" id="confemail" required>
                             </div>
                             <br>
                             <div class="row text-center">

@@ -21,7 +21,7 @@
                   <th>Item</th>
                   <th>Quantity</th>
                   <th>Price</th>
-                  <th>Download</th>
+                  <!-- <th>Download</th> -->
                 </tr>
               </thead>
               <tbody>
@@ -32,7 +32,7 @@
                   <td>
                     <form method="post" action="/download" target="_blank">
                       <input type="hidden" name="paymentId" value="{{paymentId}}">
-                      <button type="submit" class="paypal-button btn btn-default">Download</button>
+                      <!-- <button type="submit" class="paypal-button btn btn-default">Download</button> -->
                     </form>
                   </td>
                 </tr>
@@ -47,7 +47,7 @@
         </div>
       </div>
     </section>
-    <p>
+    <p style="text-align: center;">
       {{message}}
     </p>
   </div>
