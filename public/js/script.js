@@ -4,7 +4,7 @@ function parseNumber(text) {
 
 $(document).ready(function () {
   $(".dropdown-menu li a").click(function () {
-    $(".btn:first-child").text($(this).text());
+    $("#dropdownMenu1:first-child").text($(this).text());
     $("#quantity").val(parseNumber($(this).text()));
   });
 });
@@ -38,24 +38,3 @@ function check(input) {
     input.setCustomValidity('');
   }
 }
-
-  //Bind the event handler to the "submit" JavaScript event
-// $('form').submit(function () {
-
-//     // // Get the Login Name value and trim it
-//     // var email = $.trim($('#email').val());
-//     // var confemail = $.trim($('#confemail').val());
-
-//     // // Check if empty of not
-//     // if (email  === '') {
-//     //     alert('Please enter email');
-//     //     return false;
-//     // }
-//     // //Check if email address matches
-//     // if (email  != confemail) {
-//     //     alert('Please enter the email address correctly');
-//     //     return false;
-//     // }
-//     if(!checkEmail()) return false;
-
-// });
