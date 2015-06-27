@@ -51,6 +51,14 @@ a {
     transition: all .2s ease-in-out;
 }
 
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+  flex:1 0 auto;
+}
+
 a:hover,
 a:focus {
     text-decoration: none;
