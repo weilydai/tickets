@@ -10,6 +10,7 @@ var download = require('./download');
 
 /* GET home page. */
 router.get('/', home.get);
+router.get('/cn', home.get_cn);
 router.get('/cancel', cancel.get);
 router.post('/order', order.post);
 router.get('/order/', order.get);
