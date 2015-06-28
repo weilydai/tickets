@@ -86,64 +86,64 @@
     
     <!-- Ticket Section -->
     <section id="ticket" class="content-section">
-        <div class="ticket-section">
-            <div class="container">
-                <div class="row text-center">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <h2>Buy Now</h2>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4 col-lg-offset-4">
-                        <form method="post" action="/order">
-                            <div class="dropdown">
-                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-                                    1 Ticket - $10 USD
-                                    <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                                    <li role="presentation">
-                                        <a role="menuitem" href="javascript:void(0);" value="1">1 Ticket - $10 USD</a>
-                                    </li>
-                                    <li role="presentation">
-                                        <a role="menuitem" href="javascript:void(0);" value="2">2 Ticket - $20 USD</a>
-                                    </li>
-                                    <li role="presentation">
-                                        <a role="menuitem" href="javascript:void(0);" value="3">3 Ticket - $30 USD</a>
-                                    </li>
-                                    <li role="presentation">
-                                        <a role="menuitem" href="javascript:void(0);" value="4">4 Ticket - $40 USD</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <br>
-                            <div class="input-group margin-bottom-sm" id="email-parent">
-                                <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
-                                <input class="form-control" type="email" placeholder="Email address" id="email" name="email" required>
-                            </div>
-                            <br>
-                            <div class="input-group margin-bottom-sm no-error" id="confemail-parent">
-                                <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
-                                <input class="form-control" type="email" placeholder="Confirm Email" oninput="check(this);" id="confemail" required>
-                            </div>
-                            <br>
-                            <div class="row text-center">
-                                <div class="col-lg-8 col-lg-offset-2">
-                                    <input type="hidden" name="quantity" value="1" id="quantity">
-                                    <button type="submit" class="paypal-button btn btn-default" id="buy-btn">Buy Now</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+      <div class="ticket-section">
+        <div class="container">
+          <div class="row text-center">
+            <div class="col-lg-8 col-lg-offset-2">
+              <h2>Buy Now</h2>
             </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4 col-lg-offset-4">
+              <form method="post" action="/order">
+                <div class="dropdown">
+                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                  1 Ticket - $10 USD
+                  <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                    <li role="presentation">
+                      <a role="menuitem" href="javascript:void(0);" value="1">1 Ticket - $10 USD</a>
+                    </li>
+                    <li role="presentation">
+                      <a role="menuitem" href="javascript:void(0);" value="2">2 Ticket - $20 USD</a>
+                    </li>
+                    <li role="presentation">
+                      <a role="menuitem" href="javascript:void(0);" value="3">3 Ticket - $30 USD</a>
+                    </li>
+                    <li role="presentation">
+                      <a role="menuitem" href="javascript:void(0);" value="4">4 Ticket - $40 USD</a>
+                    </li>
+                  </ul>
+                </div>
+                <br>
+                <div class="input-group margin-bottom-sm" id="email-parent">
+                  <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+                  <input class="form-control" type="email" placeholder="Email address" id="email" name="email" required>
+                </div>
+                <br>
+                <div class="input-group margin-bottom-sm no-error" id="confemail-parent">
+                  <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+                  <input class="form-control" type="email" placeholder="Confirm Email" oninput="check(this);" id="confemail" required>
+                </div>
+                <br>
+                <div class="row text-center">
+                  <div class="col-lg-8 col-lg-offset-2">
+                    <input type="hidden" name="quantity" value="1" id="quantity">
+                    <button type="submit" class="paypal-button btn btn-default" id="buy-btn">Buy Now</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
     
     <!-- About Section -->
     <section id="about" class="container content-section">
       <div class="container">
-        <div class="row">
+        <div class="row row-eq-height">
           <div class="col-lg-8 col-lg-offset-2">
             <h2 class="text-center">Buying Guide</h2>
           </div>
@@ -152,36 +152,32 @@
           <div class="col-md-3 col-sm-6">
             <i class="fa fa-paper-plane-o fa-2x"></i>
             <h3>Fast and Convenient</h3>
-            <p><a href="#ticket">Buy Here</a> for <a href="https://www.amctheatres.com/" target="_blank">AMC</a>Gold Experience Ticke. Tickets in PDF format will be available in your email. You must print it and use it in any AMC nation-wide
+            <p>
+              Tickets in PDF format will be instantly available in your email. All you need to do is print it out and use it in any of the AMC Theatre locations nation-wide.
             </p>
           </div>
           <div class="col-md-3 col-sm-6">
             <i class="fa fa-usd fa-2x"></i>
             <h3>More Ways to Pay</h3>
             <p>
-            Support all major credit cards (Visa, MasterCard, Discovery, American Express) or Paypal
+              Support all major credit cards (Visa, MasterCard, Discovery, American Express) or Paypal
             </p>
           </div>
-          <div class="clearfix visible-sm "></div>
+          <div class="clearfix visible-sm-block"></div>
           <div class="col-md-3 col-sm-6">
             <i class="fa fa-envelope-o fa-2x"></i>
-            <h3>Never Lose Your Ticket</h3>
+            <h3>Never Lose Your Tickets</h3>
             <p>
-            Your e-ticket will be emailed to you, you can always retrieve it from your email address
+              Your e-ticket will be emailed to you. You can always retrieve it from your email address.
             </p>
           </div>
           <div class="col-md-3 col-sm-6">
             <i class="fa fa-clock-o fa-2x"></i>
-            <h3>
-              Never Expire
-              <br>
-              <br>
-            </h3>
+            <h3>Tickets Never Expire</h3>
             <p>
-            AMC Gold Experience Ticket never expires
+              AMC Gold Experience Ticket never expires
             </p>
           </div>
-          
         </div>
       </div>
     </section>
@@ -194,7 +190,7 @@
             <h2 class="text-center">Note</h2>
             <ul class="list-group">
               <li class="list-group-item">
-                E-ticket must be printed and presented at the ticketing counter at AMC theatres. It cannot be displayed on mobile devices
+                E-ticket must be printed and presented at the ticketing counter at AMC theatres. It cannot be shown by displaying it on mobile devices.
               </li>
               <li class="list-group-item">
                 3D, IMAX, and ETC require extra surcharges
@@ -203,11 +199,11 @@
                 AMC Gold Experience Ticket doesn't support AMC Stubs program
               </li>
               <li class="list-group-item">
-                Please refer to AMC Gold Experience Ticket Terms on<a href="https://www.amctheatres.com/gold-silver-tickets-terms" target="_blank">AMC website</a>
+                Please refer to AMC Gold Experience Ticket Terms on <a href="https://www.amctheatres.com/gold-silver-tickets-terms" target="_blank">AMC website</a>
               </li>
             </ul>
             <p>
-            For more detailed AMC Gold Experience Ticket terms, please click here.
+              For more detailed AMC Gold Experience Ticket terms, please click here.
             </p>
             <div class="text-center">
               <!-- Button trigger modal -->
@@ -227,7 +223,7 @@
                   <div class="modal-body">
                     <div id="product-tab1" class="tab ui-tabs-panel ui-widget-content ui-corner-bottom" tabindex="-1" aria-labelledby="ui-id-3" role="tabpanel" aria-expanded="true" aria-hidden="false" style="display: block;">
                       <p>
-                      <span style="font-weight:bold;">Valid at all Loews Cineplex and AMC Theatres® &nbsp;&nbsp;</span><br><br>AMC Gold e-tickets (unrestricted) are good at any AMC®, AMC Showplace, Loews®, Cineplex Odeon, Magic Johnson and Star theatres, excluding Canadian theatres. Perfect for date night, holiday gifts, employee incentives &amp; rewards.<br><br>
+                        <span style="font-weight:bold;">Valid at all Loews Cineplex and AMC Theatres® &nbsp;&nbsp;</span><br><br>AMC Gold e-tickets (unrestricted) are good at any AMC®, AMC Showplace, Loews®, Cineplex Odeon, Magic Johnson and Star theatres, excluding Canadian theatres. Perfect for date night, holiday gifts, employee incentives &amp; rewards.<br><br>
                       </p>
                       
                       <span style="font-weight:bold;">Features:</span><br>
@@ -259,43 +255,42 @@
         <div class="col-lg-8 col-lg-offset-2">
           <h2>Contact Us</h2>
           <p>If you did not receive an email, or encountered any problem, please contact us through email</p>
-          <p><a href="mailto:info@frontpass.net">info@frontpass.net</a>
-          </p>
+          <p><a href="mailto:info@frontpass.net">info@frontpass.net</a></p>
           <ul class="list-inline banner-social-buttons">
             <li>
-              <a href="https://twitter.com/frontpass" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-weibo fa-fw"></i> <span class="network-name">Twitter</span></a>
+              <a href="https://twitter.com/frontpass" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+              <br>
+              <br>
             </li>
           </ul>
-          <br>
-          <br>
         </div>
       </div>
     </section>
-    
-    <!-- Footer -->
-    <footer>
-      <div class="container text-center">
-        <ul class="list-inline">
-          <li>
-            <a href="pages/ticket_privacy.html" target="_blank"><i>Privacy Policy</i></a>
-          </li>
-          <li>
-            <a href="pages/ticket_terms.html" target="_blank"><i>Terms of Service</i></a>
-          </li>
-        </ul>
-        <p>Copyright &copy; FrontPass 2014</p>
-      </div>
-    </footer>
-    
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- Custom Theme JavaScript -->
-    <script src="js/ticket-main.js"></script>
-    <!-- Plugin JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
-    <!-- Plugin JavaScript -->
-    <script src="js/script.js"></script>
-  </body>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="container text-center">
+      <ul class="list-inline">
+        <li>
+          <a href="pages/ticket_privacy.html" target="_blank"><i>Privacy Policy</i></a>
+        </li>
+        <li>
+          <a href="pages/ticket_terms.html" target="_blank"><i>Terms of Service</i></a>
+        </li>
+      </ul>
+      <p>Copyright &copy; FrontPass 2014</p>
+    </div>
+  </footer>
+  
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+  <!-- Custom Theme JavaScript -->
+  <script src="js/ticket-main.js"></script>
+  <!-- Plugin JavaScript -->
+  <script src="js/jquery.easing.min.js"></script>
+  <!-- Plugin JavaScript -->
+  <script src="js/script.js"></script>
+</body>
 </html>

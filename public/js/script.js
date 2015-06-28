@@ -1,12 +1,12 @@
 function parseNumber(text) {
-  return parseInt(text.substr(0, text.indexOf(' ')));
+    return parseInt(text.substr(0, text.indexOf(' ')));
 }
 
-$(document).ready(function () {
-  $(".dropdown-menu li a").click(function () {
-    $("#dropdownMenu1:first-child").text($(this).text());
-    $("#quantity").val(parseNumber($(this).text()));
-  });
+$(document).ready(function() {
+    $(".dropdown-menu li a").click(function() {
+        $("#dropdownMenu1:first-child").text($(this).text());
+        $("#quantity").val(parseNumber($(this).text()));
+    });
 });
 
 // function checkEmail() {
@@ -29,12 +29,12 @@ $(document).ready(function () {
 // }
 
 function check(input) {
-  if (input.value != document.getElementById('email').value) {
-    input.setCustomValidity('Email Must be Matching.');
-    input.parentNode.className = input.parentNode.className.replace(/\bno-error\b/, 'has-error');
-  } else {
-    // input is valid -- reset the error message
-    input.parentNode.className = input.parentNode.className.replace(/\bhas-error\b/, 'no-error');
-    input.setCustomValidity('');
-  }
+    if (input.value != document.getElementById('email').value) {
+        input.setCustomValidity('Email Must be Matching.');
+        input.parentNode.className = input.parentNode.className.replace(/\bno-error\b/, 'has-error');
+    } else {
+        // input is valid -- reset the error message
+        input.parentNode.className = input.parentNode.className.replace(/\bhas-error\b/, 'no-error');
+        input.setCustomValidity('');
+    }
 }
