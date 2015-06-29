@@ -28,6 +28,6 @@
     "paypal-rest-sdk": "^1.2.0",
     "q": "^1.4.1",
     "s3": "^4.4.0",
-    "serve-favicon": "~2.0.1",
+    "serve-favicon": "~2.0.1"
   }
 }
