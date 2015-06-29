@@ -1,5 +1,5 @@
 body {
-  	margin-top: 75px;
+  	margin-top: 57px;
 }
 
 footer {
@@ -9,4 +9,54 @@ footer {
 
 footer a:hover {
 	color: #219ab3;
+}
+
+nav.navbar {
+	background-color: #fff;
+}
+
+nav.top-nav-collapse {
+	background-color: #ccc;
+}
+
+#cn {
+	height: 40px;
+	width: 40px; 
+	border-radius: 20px; 
+	background-image: url('../resources/China.png'); 
+	background-size: cover; 
+	border: none; 
+	margin: 5px;
+}
+
+#eng {
+	height: 40px;
+	width: 40px; 
+	border-radius: 20px; 
+	background-image: url('../resources/US.png'); 
+	background-size: cover; 
+	border: none; 
+	margin: 5px;
+}
+
+#about, #contact {
+	background-color: #99DCE9;
+}
+
+@media (max-width: 768px) {
+	#cn, #eng {
+		margin-left: 15px;
+	}
+
+	.navbar-header {
+		background-color: #ccc;
+	}
+
+	.navbar-collapse {
+		background-color: #eee;
+	}
+
+	.navbar-collapse ul li:hover {
+		background-color: #aaa;
+	}
 }
