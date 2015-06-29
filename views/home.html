@@ -97,6 +97,12 @@
             <div class="col-lg-4 col-lg-offset-4">
               <form method="post" action="/order">
                 <div class="dropdown">
+                  {{#if error}}
+                  <div class="alert alert-danger" role="alert">{{{error}}}</div>
+                  {{/if}}
+                  {{#if success}}
+                  <div class="alert alert-success" role="alert">{{{success}}}</div>
+                  {{/if}}
                   <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
                   1 Ticket - $10 USD
                   <span class="caret"></span>

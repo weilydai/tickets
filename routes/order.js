@@ -17,7 +17,7 @@ exports.post = function (req, res) {
 
     if (ticket.setPending(quantity)) {
         var timeout = setTimeout(function() {
-            console.log(req.session.cookie._expires < new Date());
+            // console.log(req.session.cookie._expires < new Date());
             if (req.session.cookie._expires < new Date()) {
                 return ticket.removePending(quantity);
             }
@@ -40,12 +40,12 @@ exports.post = function (req, res) {
                     }
                 }
             }
-            req.flash('error', 'createPayment failed');
+            req.flash('error', 'createPayment failed, please try again later');
             res.redirect('/');
         });
     } else {
-        req.flash('error', 'not enough stock left');
-        res.redirect('/');
+        req.flash('error', 'not enough stock left, please try again later');
+        res.redirect('/#ticket');
     }
 };
 
