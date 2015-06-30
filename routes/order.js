@@ -40,11 +40,11 @@ exports.post = function (req, res) {
                     }
                 }
             }
-            req.flash('error', 'createPayment failed, please try again later');
+            req.flash('error', 'CreatePayment failed, please try again later');
             res.redirect('/');
         });
     } else {
-        req.flash('error', 'not enough stock left, please try again later');
+        req.flash('error', 'Not enough stock left, please try again later');
         res.redirect('/#ticket');
     }
 };

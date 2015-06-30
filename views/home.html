@@ -97,12 +97,6 @@
             <div class="col-lg-4 col-lg-offset-4">
               <form method="post" action="/order">
                 <div class="dropdown">
-                  {{#if error}}
-                  <div class="alert alert-danger" role="alert">{{{error}}}</div>
-                  {{/if}}
-                  {{#if success}}
-                  <div class="alert alert-success" role="alert">{{{success}}}</div>
-                  {{/if}}
                   <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
                   1 Ticket - $10 USD
                   <span class="caret"></span>
@@ -135,6 +129,12 @@
                 <br>
                 <div class="row text-center">
                   <div class="col-lg-8 col-lg-offset-2">
+                    {{#if error}}
+                    <div class="alert alert-danger" role="alert"><b>{{{error}}}</b></div>
+                    {{/if}}
+                    {{#if success}}
+                    <div class="alert alert-success" role="alert"><b>{{{success}}}</b></div>
+                    {{/if}}
                     <input type="hidden" name="quantity" value="1" id="quantity">
                     <button type="submit" class="paypal-button btn btn-default" id="buy-btn">Buy Now</button>
                   </div>
@@ -149,7 +149,7 @@
     <!-- About Section -->
     <section id="about" class="container content-section">
       <div class="container">
-        <div class="row row-eq-height">
+        <div class="row">
           <div class="col-lg-8 col-lg-offset-2">
             <h2 class="text-center">Buying Guide</h2>
           </div>
