@@ -128,13 +128,15 @@
                 </div>
                 <br>
                 <div class="row text-center">
-                  <div class="col-lg-8 col-lg-offset-2">
+                  <div style="padding: 0 15px;">
                     {{#if error}}
                     <div class="alert alert-danger" role="alert"><b>{{{error}}}</b></div>
                     {{/if}}
                     {{#if success}}
                     <div class="alert alert-success" role="alert"><b>{{{success}}}</b></div>
                     {{/if}}
+                  </div>
+                  <div class="col-lg-8 col-lg-offset-2">
                     <input type="hidden" name="quantity" value="1" id="quantity">
                     <button type="submit" class="paypal-button btn btn-default" id="buy-btn">Buy Now</button>
                   </div>
