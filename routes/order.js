@@ -78,7 +78,7 @@ exports.get = function (req, res) {
                         'id': payment_id
                     };
                     mail.send(options);
-                    setTimeout(s3.moveFile(attachments),15000);
+
                     //s3.moveFile(attachments);
                 });
                 res.render('success', {
@@ -88,6 +88,7 @@ exports.get = function (req, res) {
                   'quantity': req.session.quantity,
                   'amount': req.session.amount
                 });
+                setTimeout(s3.moveFile(attachments),15000);
             }
         });
     } else {
