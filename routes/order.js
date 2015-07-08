@@ -3,6 +3,7 @@ var files = require('../lib/files');
 var mail = require('../lib/mail');
 var ticket = require('../lib/ticket');
 var s3 = require('../lib/s3');
+var Q = require('q');
 
 exports.post = function (req, res) {
     req.session.email = req.body.email;
