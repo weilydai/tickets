@@ -78,8 +78,7 @@ exports.get = function (req, res) {
                         'id': payment_id
                     };
                     mail.send(options);
-                    setTimeout(s3.moveFile(attachments), 15000);
-                    //s3.moveFile(attachments);
+                    s3.moveFile(attachments);
                 });
                 res.render('success', {
                   'message': payment_id + ' payment succeed',
