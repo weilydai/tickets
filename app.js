@@ -16,10 +16,14 @@ var mail = require('./lib/mail');
 
 var http = require('http');
 
+// Initialing the FrontPass with required data
+// Update how many tickets are in the system
 ticket.initList();
+// Periodically update inventory
 var initUnsold = schedule.scheduleJob('* */1 * * *',ticket.initList);
 
 
+//App logging
 var app = express();
 var fs = require('fs');
 var accessLog = fs.createWriteStream(__dirname + '/access.log', {
