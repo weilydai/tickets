@@ -11,18 +11,14 @@ var hbs = require('./lib/hbs');
 var routes = require('./routes/index');
 var paypal = require('./lib/paypal');
 var ticket = require('./lib/ticket');
-var s3 = require('./lib/s3');
 var mail = require('./lib/mail');
-
 var http = require('http');
-
+var s3 = require('./lib/s3');
 // Initialing the FrontPass with required data for ticket sales management
 // Update how many tickets are in the system
 ticket.initList();
 // Periodically update inventory
 var initUnsold = schedule.scheduleJob('* */1 * * *',ticket.initList);
-var initTrack = s3.findMinFile(false);
-console.log("The min number is ###" + initTrack);
 
 //End required initialization for ticket sales management
 
