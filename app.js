@@ -1,19 +1,25 @@
-var express = require('express');
+
 var path = require('path');
-var session = require('express-session');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var flash = require('connect-flash');
 var schedule = require('node-schedule');
-var hbs = require('./lib/hbs');
 var routes = require('./routes/index');
 var paypal = require('./lib/paypal');
 var ticket = require('./lib/ticket');
 var mail = require('./lib/mail');
 var http = require('http');
 var s3 = require('./lib/s3');
+
+
+var express = require('express');
+var session = require('express-session');
+
+var hbs = require('./lib/hbs');
+
+
 // Initialing the FrontPass with required data for ticket sales management
 // Update how many tickets are in the system
 ticket.initList();
