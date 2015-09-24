@@ -86,68 +86,80 @@
     
     <!-- Ticket Section -->
     <section id="ticket" class="content-section">
-        <div class="ticket-section">
-            <div class="container">
-                <div class="row text-center">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <h2>现在购买</h2>
-                        <h4>票会马上送到您的email邮箱中</h4>
-                        <h4><del>原价 $14.5</del> 现在只需$10! (7折!)</h4>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4 col-lg-offset-4">
-                        <form method="post" action="/order">
-                            <div class="dropdown">
-                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-                                    1 Ticket - $10 USD
-                                    <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                                    <li role="presentation">
-                                        <a role="menuitem" href="javascript:void(0);" value="1">1 Ticket - $10 USD</a>
-                                    </li>
-                                    <li role="presentation">
-                                        <a role="menuitem" href="javascript:void(0);" value="2">2 Ticket - $20 USD</a>
-                                    </li>
-                                    <li role="presentation">
-                                        <a role="menuitem" href="javascript:void(0);" value="3">3 Ticket - $30 USD</a>
-                                    </li>
-                                    <li role="presentation">
-                                        <a role="menuitem" href="javascript:void(0);" value="4">4 Ticket - $40 USD</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <br>
-                            <div class="input-group margin-bottom-sm" id="email-parent">
-                                <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
-                                <input class="form-control" type="email" placeholder="Email address" id="email" name="email" required>
-                            </div>
-                            <br>
-                            <div class="input-group margin-bottom-sm no-error" id="confemail-parent">
-                                <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
-                                <input class="form-control" type="email" placeholder="Confirm Email" oninput="check(this);" id="confemail" required>
-                            </div>
-                            <br>
-                            <div class="row text-center">
-                                <div style="padding: 0 15px;">
-                                    {{#if error}}
-                                    <div class="alert alert-danger" role="alert"><b>{{{error}}}</b></div>
-                                    {{/if}}
-                                    {{#if success}}
-                                    <div class="alert alert-success" role="alert"><b>{{{success}}}</b></div>
-                                    {{/if}}
-                                </div>
-                                <div class="col-lg-8 col-lg-offset-2">
-                                    <input type="hidden" name="quantity" value="1" id="quantity">
-                                    <button type="submit" class="paypal-button btn btn-default" id="buy-btn">Buy Now</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+      <div class="ticket-section">
+        <div class="container">
+          <div class="row text-center">
+            <div class="col-lg-8 col-lg-offset-2">
+              <h2>现在购买</h2>
+              <h4>票会马上送到您的email邮箱中</h4>
+              <h4><del>原价 $14.5</del> 现在只需$10! (7折!)</h4>
             </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4 col-lg-offset-4">
+              <form method="post" action="/order">
+                <div class="dropdown">
+                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                  1 Ticket - $10 USD
+                  <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                    <li role="presentation">
+                      <a role="menuitem" href="javascript:void(0);" value="1">1 Ticket - $10 USD</a>
+                    </li>
+                    <li role="presentation">
+                      <a role="menuitem" href="javascript:void(0);" value="2">2 Ticket - $20 USD</a>
+                    </li>
+                    <li role="presentation">
+                      <a role="menuitem" href="javascript:void(0);" value="3">3 Ticket - $30 USD</a>
+                    </li>
+                    <li role="presentation">
+                      <a role="menuitem" href="javascript:void(0);" value="4">4 Ticket - $40 USD</a>
+                    </li>
+                    <li role="presentation">
+                      <a role="menuitem" href="javascript:void(0);" value="5">5 Ticket - $50 USD</a>
+                    </li>
+                    <li role="presentation">
+                      <a role="menuitem" href="javascript:void(0);" value="6">6 Ticket - $60 USD</a>
+                    </li>
+                    <li role="presentation">
+                      <a role="menuitem" href="javascript:void(0);" value="7">7 Ticket - $70 USD</a>
+                    </li>
+                    <li role="presentation">
+                      <a role="menuitem" href="javascript:void(0);" value="8">8 Ticket - $80 USD</a>
+                    </li>
+                  </ul>
+                </div>
+                <br>
+                <div class="input-group margin-bottom-sm" id="email-parent">
+                  <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+                  <input class="form-control" type="email" placeholder="Email address" id="email" name="email" required>
+                </div>
+                <br>
+                <div class="input-group margin-bottom-sm no-error" id="confemail-parent">
+                  <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+                  <input class="form-control" type="email" placeholder="Confirm Email" oninput="check(this);" id="confemail" required>
+                </div>
+                <br>
+                <div class="row text-center">
+                  <div style="padding: 0 15px;">
+                    {{#if error}}
+                    <div class="alert alert-danger" role="alert"><b>{{{error}}}</b></div>
+                    {{/if}}
+                    {{#if success}}
+                    <div class="alert alert-success" role="alert"><b>{{{success}}}</b></div>
+                    {{/if}}
+                  </div>
+                  <div class="col-lg-8 col-lg-offset-2">
+                    <input type="hidden" name="quantity" value="1" id="quantity">
+                    <button type="submit" class="paypal-button btn btn-default" id="buy-btn">Buy Now</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
     
     <!-- About Section -->
@@ -163,14 +175,14 @@
             <i class="fa fa-paper-plane-o fa-2x"></i>
             <h3>方便快捷,全美通用</h3>
             <p>
-            在<a href="#ticket">这里</a>直接购买<a href="https://www.amctheatres.com/">AMC</a>Gold Experience票，付款后PDF形式的电子票会直接在网页上供您下载。打印之后，就可以马上在全美任何一家AMC使用
+              在<a href="#ticket">这里</a>直接购买<a href="https://www.amctheatres.com/">AMC</a>Gold Experience票，付款后PDF形式的电子票会直接在网页上供您下载。打印之后，就可以马上在全美任何一家AMC使用
             </p>
           </div>
           <div class="col-md-3 col-sm-6">
             <i class="fa fa-usd fa-2x"></i>
             <h3>多种方式进行付款</h3>
             <p>
-            支持信用卡(Visa, MasterCard, Discovery, American Express)或者Paypal进行付款
+              支持信用卡(Visa, MasterCard, Discovery, American Express)或者Paypal进行付款
             </p>
           </div>
           <div class="clearfix visible-sm "></div>
@@ -178,14 +190,14 @@
             <i class="fa fa-envelope-o fa-2x"></i>
             <h3>不会丢失</h3>
             <p>
-            在您提供email后，我们会将电影票使用email形式发送给您，您也可以点击确认页上的下载链接进行取票
+              在您提供email后，我们会将电影票使用email形式发送给您，您也可以点击确认页上的下载链接进行取票
             </p>
           </div>
           <div class="col-md-3 col-sm-6">
             <i class="fa fa-clock-o fa-2x"></i>
             <h3>永不过期</h3>
             <p>
-            AMC承诺Gold Experience票永远不会过期
+              AMC承诺Gold Experience票永远不会过期
             </p>
           </div>
           
@@ -214,7 +226,7 @@
               </li>
             </ul>
             <p>
-            更多关于AMC Gold Experience Ticket的条款信息，请点击这里
+              更多关于AMC Gold Experience Ticket的条款信息，请点击这里
             </p>
             <div class="text-center">
               <!-- Button trigger modal -->
@@ -234,7 +246,7 @@
                   <div class="modal-body">
                     <div id="product-tab1" class="tab ui-tabs-panel ui-widget-content ui-corner-bottom" tabindex="-1" aria-labelledby="ui-id-3" role="tabpanel" aria-expanded="true" aria-hidden="false" style="display: block;">
                       <p>
-                      <span style="font-weight:bold;">Valid at all Loews Cineplex and AMC Theatres® &nbsp;&nbsp;</span><br><br>AMC Gold e-tickets (unrestricted) are good at any AMC®, AMC Showplace, Loews®, Cineplex Odeon, Magic Johnson and Star theatres, excluding Canadian theatres. Perfect for date night, holiday gifts, employee incentives &amp; rewards.<br><br>
+                        <span style="font-weight:bold;">Valid at all Loews Cineplex and AMC Theatres® &nbsp;&nbsp;</span><br><br>AMC Gold e-tickets (unrestricted) are good at any AMC®, AMC Showplace, Loews®, Cineplex Odeon, Magic Johnson and Star theatres, excluding Canadian theatres. Perfect for date night, holiday gifts, employee incentives &amp; rewards.<br><br>
                       </p>
                       
                       <span style="font-weight:bold;">Features:</span><br>
@@ -267,52 +279,52 @@
           <h2>联系我们</h2>
           <p>如果您没有收到email，或在购票过程中发现问题，可以通过email来联系我们</p>
           <p><a href="mailto:weilydai@hotmail.com">info@frontpass.net</a>
-          </p>
-          <ul class="list-inline banner-social-buttons">
-            <li>
-              <a href="https://twitter.com/frontpass" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-            </li>
-          </ul>
-          <br>
-          <br>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Footer -->
-    <footer>
-      <div class="container text-center">
-        <ul class="list-inline">
+        </p>
+        <ul class="list-inline banner-social-buttons">
           <li>
-            <a href="pages/ticket_privacy.html" target="_blank"><i>Privacy Policy</i></a>
-          </li>
-          <li>
-            <a href="pages/ticket_terms.html" target="_blank"><i>Terms of Service</i></a>
+            <a href="https://twitter.com/frontpass" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
           </li>
         </ul>
-        <p>Copyright &copy; FrontPass 2014</p>
+        <br>
+        <br>
       </div>
-    </footer>
-    
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- Custom Theme JavaScript -->
-    <script src="js/ticket-main.js"></script>
-    <!-- Plugin JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
-    <!-- Plugin JavaScript -->
-    <script src="js/script.js"></script>
-    <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-66329605-1', 'auto');
-    ga('send', 'pageview');
-    
-    </script>
-  </body>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="container text-center">
+      <ul class="list-inline">
+        <li>
+          <a href="pages/ticket_privacy.html" target="_blank"><i>Privacy Policy</i></a>
+        </li>
+        <li>
+          <a href="pages/ticket_terms.html" target="_blank"><i>Terms of Service</i></a>
+        </li>
+      </ul>
+      <p>Copyright &copy; FrontPass 2014</p>
+    </div>
+  </footer>
+  
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+  <!-- Custom Theme JavaScript -->
+  <script src="js/ticket-main.js"></script>
+  <!-- Plugin JavaScript -->
+  <script src="js/jquery.easing.min.js"></script>
+  <!-- Plugin JavaScript -->
+  <script src="js/script.js"></script>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  
+  ga('create', 'UA-66329605-1', 'auto');
+  ga('send', 'pageview');
+  
+  </script>
+</body>
 </html>
