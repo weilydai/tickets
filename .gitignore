@@ -8,6 +8,3 @@ access.log
 
 # Ignore all the error files
 error.log
-
-# Ignore all the tickets files
-files/
