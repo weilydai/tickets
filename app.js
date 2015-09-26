@@ -12,11 +12,8 @@ var ticket = require('./lib/ticket');
 var mail = require('./lib/mail');
 var http = require('http');
 var s3 = require('./lib/s3');
-
-
 var express = require('express');
 var session = require('express-session');
-
 var hbs = require('./lib/hbs');
 
 
