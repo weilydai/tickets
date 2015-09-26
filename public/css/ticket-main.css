@@ -164,7 +164,13 @@ a:focus {
 }
 
 .intro .intro-body .intro-text {
-    font-size: 18px;
+    font-size: 26px;
+    font-weight: bold;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,"Microsoft YaHei", "微软雅黑";
+}
+
+.intro-text-2 {
+    font-size: 16px;
     font-weight: bold;
     font-family: Montserrat,"Helvetica Neue",Helvetica,"Microsoft YaHei", "微软雅黑";
 }
@@ -180,7 +186,7 @@ a:focus {
     }
 
     .intro .intro-body .intro-text {
-        font-size: 25px;
+        font-size: 32px;
     }
 }
 
