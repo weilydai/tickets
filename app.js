@@ -19,9 +19,7 @@ var hbs = require('./lib/hbs');
 
 // Initialing the FrontPass with required data for ticket sales management
 // Update how many tickets are in the system
-ticket.initList();
-// Periodically update inventory
-var initUnsold = schedule.scheduleJob('0 */1 * * *',ticket.initList);
+
 
 //End required initialization for ticket sales management
 
